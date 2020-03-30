@@ -24,12 +24,14 @@ public class BasicsPakkeKarne{
 
     public static void main(String[] args){
         BasicsPakkeKarne bs1 = new BasicsPakkeKarne(101, "Atharva", 'A');
+        BasicsPakkeKarne bs4 = new BasicsPakkeKarne(104, "Apoorva", 'C');
         BasicsPakkeKarne bs2 = new BasicsPakkeKarne(102, "Ramesh", 'A');
         BasicsPakkeKarne bs3 = new BasicsPakkeKarne(103, "Abhishek Upmanyu", 'F');
         List<BasicsPakkeKarne> objList = new LinkedList<BasicsPakkeKarne>();
         objList.add(bs1);
         objList.add(bs2);
         objList.add(bs3);
+        objList.add(bs4);
         
         for(BasicsPakkeKarne bs:objList){
             System.out.println(bs.rollNo + " " +bs.Name + " " + bs.division);
