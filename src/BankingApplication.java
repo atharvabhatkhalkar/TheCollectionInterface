@@ -21,7 +21,7 @@ import java.util.Random;
 
 class connectionDatabase{
 
-    public void connectionToDatabase(){
+    public void connectionToDatabase() throws SQLException{
 
 
   Connection conn = null;
@@ -34,6 +34,12 @@ class connectionDatabase{
                    {
                        System.out.println("SQLException"+s);
                    }
+                    
+                   Statement stmt = conn.createStatement();
+
+          String sql="CREATE TABLE ICICI_BANK(account_number int primary key,accountholdername varchar (40),atm_pin int, account_balance float(4))";
+
+            stmt.executeUpdate(sql);
 
     }
 
@@ -306,8 +312,6 @@ public class BankingApplication {
     private int accountNumber;
     private int pinNumber;
     public static void main(String[] args) throws SQLException{
-        connectionDatabase objofcon = new connectionDatabase();
-        objofcon.connectionToDatabase();
         boolean bool=true;
        while(bool){
 
